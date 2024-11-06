@@ -9,20 +9,18 @@
     <?php
         // Exercícios
         // A
-        $a = 18;
-        $b = -43;
-        $c = 65;
-        $resposta = ($c - $b)/$a;
-        echo "O valor de X é {$resposta} <br>";
+        $resposta = (65 - -43)/18;
+        echo "A) O valor de X é {$resposta} <br>";
 
         // B
-        $a = 6;
-        $b = 8;
-        $c = 5;
-        $d = 12;
-        $e = 21;
-        $resposta1 = ($a * $b/($c*$d) + $e);
-        echo "O valor é {$resposta1} <br>";
+        $resposta1 = (6 * 8/(5*12) + 21);
+        echo "B) {$resposta1} <br>";
+
+        // C
+        $resposta2 = (64 * 34 - 12);
+        echo "C) {$resposta2} <br>";
+
+        // D
 
     ?>
 </body>
