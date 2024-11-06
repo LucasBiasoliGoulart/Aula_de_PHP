@@ -21,6 +21,12 @@
         echo "C) {$resposta2} <br>";
 
         // D
+        $resposta3 = 34 / 16 / 8 + 8 ** 3 * (123 - 15 + 8 *(12**2 * 3) - 16);
+        echo "D) {$resposta3} <br>";
+
+        // E
+        $resposta4 = 2 * 3**3 + (81 / 3 * 12) * 65 + (1253 / (12**2 + 7));
+        echo "E) {$resposta4}";
 
     ?>
 </body>
