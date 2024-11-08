@@ -6,37 +6,37 @@
     <title>Calculadora IMC</title>
 </head>
 <body>
-    <h1>Calculadora IMC</h1>
     <form action="calculadora.php" method="post">
+        <h1>Calculadora IMC</h1>
         <label for="peso">Peso (KG):</label>
         <input type="text" id="peso" name="peso"><br>
         <label for="altura">Altura (M):</label>
         <input type="text" id="altura" name="altura"><br>
         <input type="submit" value="Calcular" class="botao">
-    </form>
-    <?php
+        <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $peso = $_POST['peso'];
             $altura = $_POST['altura'];
 
             if (is_numeric($peso) && is_numeric($altura) && $altura > 0) {
                 $imc = $peso / ($altura * $altura);
-                echo "<h2>Seu IMC é: ". number_format($imc, 2) ."</h2>";
+                echo "<h2 style='font-weight: 400'>Seu IMC é: ". number_format($imc, 2) ."</h2>";
 
                 if ($imc < 18.5) {
-                    echo "<p>Você está abaixo do peso.</p>";
+                    echo "<p style='font-size: 20px'>Você está abaixo do peso.</p>";
                 }else if ($imc < 24.9) {
-                    echo "<p>Você está com peso normal.</p>";
+                    echo "<p style='font-size: 20px'>Você está com peso normal.</p>";
                 }else if ($imc < 29.9) {
-                    echo "<p>Você está com sobrepeso.</p>";
+                    echo "<p style='font-size: 20px'>Você está com sobrepeso.</p>";
                 }else {
-                    echo "<p>Você está com obesidade.</p>";
+                    echo "<p style='font-size: 20px'>Você está com obesidade.</p>";
                 }
             }else {
-                echo "<p>Por favor, insira valores validos.</p>";
+                echo "<p style='font-size: 20px'>Por favor, insira valores validos.</p>";
             }
         }
     ?>
+    </form>
     <style>
         body{
             width: 100%;
@@ -48,13 +48,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
             background-color: #E9E9E9;
         }
 
         h1{
             font-size: 50px;
             font-weight: 400;
+            text-align: center;
         }
 
         form{
@@ -76,7 +76,6 @@
             height: 50px;
             width: 100%;
             border: none;
-            border-radius: 10px;
             background-color: #2EC7FF;
             font-size: 20px;
             cursor: pointer;
