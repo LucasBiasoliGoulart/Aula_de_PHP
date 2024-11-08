@@ -12,7 +12,7 @@
         <input type="text" id="peso" name="peso"><br>
         <label for="altura">Altura (M):</label>
         <input type="text" id="altura" name="altura"><br>
-        <input type="submit" value="Calcular">
+        <input type="submit" value="Calcular" class="botao">
     </form>
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -37,5 +37,51 @@
             }
         }
     ?>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #E9E9E9;
+        }
+
+        h1{
+            font-size: 50px;
+            font-weight: 400;
+        }
+
+        form{
+            width: 30%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3);
+        }
+
+        input{
+            width: 98%;
+            height: 40px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .botao{
+            height: 50px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            background-color: #2EC7FF;
+            font-size: 20px;
+            cursor: pointer;
+            margin-bottom: 0px;
+        }
+    </style>
 </body>
 </html>
