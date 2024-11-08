@@ -14,28 +14,28 @@
         <input type="text" id="altura" name="altura"><br>
         <input type="submit" value="Calcular" class="botao">
         <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $peso = $_POST['peso'];
-            $altura = $_POST['altura'];
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $peso = $_POST['peso'];
+                $altura = $_POST['altura'];
 
-            if (is_numeric($peso) && is_numeric($altura) && $altura > 0) {
-                $imc = $peso / ($altura * $altura);
-                echo "<h2 style='font-weight: 400'>Seu IMC é: ". number_format($imc, 2) ."</h2>";
+                if (is_numeric($peso) && is_numeric($altura) && $altura > 0) {
+                    $imc = $peso / ($altura * $altura);
+                    echo "<h2 style='font-weight: 400'>Seu IMC é: ". number_format($imc, 2) ."</h2>";
 
-                if ($imc < 18.5) {
-                    echo "<p style='font-size: 20px'>Você está abaixo do peso.</p>";
-                }else if ($imc < 24.9) {
-                    echo "<p style='font-size: 20px'>Você está com peso normal.</p>";
-                }else if ($imc < 29.9) {
-                    echo "<p style='font-size: 20px'>Você está com sobrepeso.</p>";
+                    if ($imc < 18.5) {
+                        echo "<p style='font-size: 20px'>Você está abaixo do peso.</p>";
+                    }else if ($imc < 24.9) {
+                        echo "<p style='font-size: 20px'>Você está com peso normal.</p>";
+                    }else if ($imc < 29.9) {
+                        echo "<p style='font-size: 20px'>Você está com sobrepeso.</p>";
+                    }else {
+                        echo "<p style='font-size: 20px'>Você está com obesidade.</p>";
+                    }
                 }else {
-                    echo "<p style='font-size: 20px'>Você está com obesidade.</p>";
+                    echo "<p style='font-size: 20px'>Por favor, insira valores validos.</p>";
                 }
-            }else {
-                echo "<p style='font-size: 20px'>Por favor, insira valores validos.</p>";
             }
-        }
-    ?>
+        ?>
     </form>
     <style>
         body{
@@ -68,8 +68,7 @@
         input{
             width: 98%;
             height: 40px;
-            margin-bottom: 10px;
-            margin-top: 10px;
+            margin-bottom: 20px;
         }
 
         .botao{
