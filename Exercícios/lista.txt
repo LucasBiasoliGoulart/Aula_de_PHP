@@ -1,0 +1,19 @@
+Exercício​
+
+1. Crie um programa em PHP que imprima os números primos de 1 a 100. Um número primo é um número divisível por 1 e por ele mesmo (sem resto).
+
+​2. Crie um programa em PHP que imprima os números pares entre 1000 e 2000;​
+
+3. Escreva um algoritmo que mostre o menor e o maior dos números reais digitados pelo usuário. Termine a leitura se o usuário digitar zero.​
+
+4. Faça um algoritmo que mostre a tabuada de qualquer número escolhido pelo usuário (considerar tabuada do número 1 ao 10).​
+
+5. Uma firma fez uma pesquisa de mercado para saber se as pessoas gostaram ou não de um novo produto lançado. Para isso forneceu o sexo (M / F) do entrevistado e sua resposta (S / N). Sabe-se que entrevistaram 10 pessoas. Faça um algoritmo que calcule e mostre: ​
+
+O número de pessoas que respondeu sim; ​
+
+O número de pessoas que respondeu não; ​
+
+A porcentagem de homens que respondeu Não entre todos os homens analisados. ​
+
+A porcentagem de mulheres que respondeu Não entre todos as mulheres analisadas.
