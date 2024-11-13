@@ -11,11 +11,17 @@
         <h1>HelpDesk</h1>
     </nav>
     <div class="login">
-        <form action="index.php" method="POST">
+        <form action="valida_login.php" method="GET">
             <h2>Login</h2>
             <input type="email" name="email" id="email" placeholder="Email">
             <input type="password" name="senha" id="senha" placeholder="Senha">
-            <button>login</button>
+
+            <?php
+                if (isset($_GET['login']) && $_GET['login'] === 'erro') { ?>
+                    <div class="alert">Usuário e Senha invalido(s) !!</div>
+            <?php } ?>
+
+            <button type='submit'>login</button>
         </form>
     </div>
     <style>
@@ -75,21 +81,28 @@
 
         input{
             width: 100%;
-            height: 50px;
+            height: 40px;
             border: 1px solid gray;
             border-radius: 10px;
             margin-bottom: 25px;
             background-color: #F3F3F3;
+            padding: 5px;
         }
 
         button{
             width: 100%;
-            height: 50px;
+            height: 54px;
             border: none;
             border-radius: 5px;
             background-color: dodgerblue;
             font-size: 20px;
             cursor: pointer;
+        }
+
+        .alert{
+            color: red;
+            font-size: 17px;
+            margin-bottom: 10px;
         }
     </style>
 </body>
