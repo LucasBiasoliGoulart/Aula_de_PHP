@@ -21,6 +21,11 @@
                     <div class="alert">Usuário e Senha invalido(s) !!</div>
             <?php } ?>
 
+            <?php
+                if (isset($_GET['login']) && $_GET['login'] === 'erro2') { ?>
+                    <div class="alert">Login Obrigatorio !!</div>
+            <?php } ?>
+
             <button type='submit'>login</button>
         </form>
     </div>
