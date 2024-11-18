@@ -41,9 +41,9 @@
                     <h4> <?php echo $chamado_de_dados[1] ?></h6>
                     <p> <?php echo $chamado_de_dados[2] ?></p>
                 </div>
+                <?php } ?>
                 <a href="./home.php" class="voltar">Voltar</a>
             </div>
-            <?php } ?>
         </div>
     </form>
     <style>
@@ -98,8 +98,10 @@
 
         .textos{
             width: 97%;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             margin-left: 10px;
+            background-color: #F8F8F8;
+            border: 1px solid black;
         }
 
         .voltar{
@@ -110,9 +112,8 @@
         }
 
         h3, h4, p{
-            padding: 7px;
             font-weight: 400;
-            background-color: #ECECEC;
+            margin-left: 10px;
         }
 
         a{
