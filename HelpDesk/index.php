@@ -105,12 +105,9 @@
         }
 
         .alert{
-            color: white;
+            color: red;
             font-size: 17px;
             margin-bottom: 10px;
-            background-color: red;
-            border-radius: 10px;
-            padding: 3px 9px;
         }
     </style>
 </body>
