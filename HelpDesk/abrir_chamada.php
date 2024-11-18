@@ -48,7 +48,7 @@
                 </div>
                 <div class="links">
                    <div class="buttons">
-                        <button><a href="./home.php">Voltar</a></button>
+                        <a href="./home.php" class="voltar">Voltar</a>
                         <button type="submit">Abrir</button>
                    </div>
                 </div>
@@ -151,13 +151,19 @@
         }
 
         button{
-            width: 50%;
-            height: 50px;
+            padding: 15px 120px;
             font-size: 20px;
             border: none;
             border-radius: 5px;
             background-color: dodgerblue;
             cursor: pointer;
+        }
+
+        .voltar{
+            padding: 15px 120px;
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: dodgerblue;
         }
     </style>
 </body>

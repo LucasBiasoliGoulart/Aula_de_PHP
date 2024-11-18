@@ -1,0 +1,3 @@
+Celular|Hardware|Teste
+Computador|Software|A placa mãe parou de funcionar
+Notebook|Software|O computador não está ligando

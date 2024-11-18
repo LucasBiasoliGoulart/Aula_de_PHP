@@ -5,7 +5,7 @@
 
     $dados = $titulo. '|' . $categoria . '|' . $descricao . PHP_EOL;
 
-    $arquivo = fopen('registro.hd', 'a');
+    $arquivo = fopen('chamada.txt', 'a');
 
     fwrite($arquivo, $dados);
 

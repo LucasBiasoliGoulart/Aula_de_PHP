@@ -1,9 +1,8 @@
 <?php 
     require 'validador_de_acesso.php';
 
-    $chamadas = [];
-
-    $arquivo = fopen('registro.hd', 'r');
+    $arquivo = fopen('chamada.txt', 'r');
+    $chamadas = array();
 
     while (!feof($arquivo)) {
         $registro = fgets($arquivo);
