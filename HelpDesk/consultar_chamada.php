@@ -24,7 +24,7 @@
         <a href="./home.php"><img src="./Img/logo.png" alt="Logo"></a>
         <h1>HelpDesk</h1>
     </nav>
-    <form action="">
+    <form action="#">
         <div class="consulta">
             <div class="card">
                 <h2>Consulta de Chamada</h2>
@@ -97,8 +97,8 @@
         }
 
         .textos{
-            width: 100%;
-            margin-bottom: 10px;
+            width: 97%;
+            margin-bottom: 30px;
             margin-left: 10px;
         }
 
@@ -109,8 +109,10 @@
             background-color: dodgerblue;
         }
 
-        h3, h4{
+        h3, h4, p{
+            padding: 7px;
             font-weight: 400;
+            background-color: #ECECEC;
         }
 
         a{

@@ -109,9 +109,9 @@
         }
 
         .titulo2, .categoria, .descricao, .links{
-            margin-left: 10px;
-            margin-right: 10px;
-            margin-bottom: 10px;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-bottom: 15px;
         }
 
         label{
@@ -126,7 +126,7 @@
         }
 
         select{
-            width: 50%;
+            width: 100%;
             height: 40px;
             padding: 5px;
         }
@@ -142,7 +142,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
+            gap: 10px;
         }
 
         a{

@@ -3,7 +3,7 @@
     $categoria = str_replace('|', '-', $_POST['categoria']);
     $descricao = str_replace('|', '-', $_POST['descricao']);
 
-    $dados = $titulo. '|' . $categoria . '|' . $descricao . PHP_EQL;
+    $dados = $titulo. '|' . $categoria . '|' . $descricao . PHP_EOL;
 
     $arquivo = fopen('registro.hd', 'a');
 
