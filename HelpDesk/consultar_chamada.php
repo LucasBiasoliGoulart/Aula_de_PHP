@@ -33,11 +33,12 @@
                     $chamado_de_dados = explode('|', $chamado);
 
                     if (count($chamado_de_dados) < 3) {
-                        continue; }
+                        continue;
+                    }
                 ?>
                 <div class="textos">
-                    <h5> <?php echo $chamado_de_dados[0] ?></h5>
-                    <h6> <?php echo $chamado_de_dados[1] ?></h6>
+                    <h3> <?php echo $chamado_de_dados[0] ?></h5>
+                    <h4> <?php echo $chamado_de_dados[1] ?></h6>
                     <p> <?php echo $chamado_de_dados[2] ?></p>
                 </div>
                 <a href="./home.php" class="voltar">Voltar</a>
@@ -106,6 +107,10 @@
             padding: 10px 50px;
             border-radius: 10px;
             background-color: dodgerblue;
+        }
+
+        h3, h4{
+            font-weight: 400;
         }
 
         a{
