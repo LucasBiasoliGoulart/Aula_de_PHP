@@ -11,7 +11,7 @@
         <h1>HelpDesk</h1>
     </nav>
     <div class="login">
-        <form action="valida_login.php" method="GET">
+        <form action="validador_de_login.php" method="GET">
             <h2>Login</h2>
             <input type="email" name="email" id="email" placeholder="Email">
             <input type="password" name="senha" id="senha" placeholder="Senha">
@@ -105,9 +105,12 @@
         }
 
         .alert{
-            color: red;
+            color: white;
             font-size: 17px;
             margin-bottom: 10px;
+            background-color: red;
+            border-radius: 10px;
+            padding: 3px 9px;
         }
     </style>
 </body>
