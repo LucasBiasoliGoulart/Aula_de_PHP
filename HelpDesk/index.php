@@ -92,6 +92,12 @@
             margin-bottom: 25px;
             background-color: #F3F3F3;
             padding: 5px;
+            color: black;
+            font-size: 15px;
+        }
+
+        input::placeholder{
+            color: black;
         }
 
         button{

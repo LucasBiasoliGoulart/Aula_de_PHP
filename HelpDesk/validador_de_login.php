@@ -1,12 +1,13 @@
 <?php
-   session_start();
+    session_start();
 
-   $usuarios = array(
-        ['email' => 'helloworld@gmail.com', 'senha' => '1234']
+    $usuarios = array(
+        ['id' => 1, 'email' => 'helloworld@gmail.com', 'senha' => '1234'],
+        ['id' => 2, 'email' => 'hello24@gmail.com', 'senha' => '123']
     );
 
     $usuarioAutenticado = false;
-
+    
     $email = $_GET['email'];
     $senha = $_GET['senha'];
 
@@ -14,6 +15,7 @@
         if ($email == $usuarios[$idx]['email'] && $senha == $usuarios[$idx]['senha']) {
             $usuarioAutenticado = true;
             break;
+            $_SESSION['user_id'] = $usuarios[$idx]['id'];
         }else {
             $usuarioAutenticado = false;
         }
