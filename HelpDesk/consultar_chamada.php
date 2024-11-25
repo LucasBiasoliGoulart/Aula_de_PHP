@@ -36,9 +36,9 @@
                     }
                 ?>
                 <div class="textos">
-                    <h3> <?php echo $chamado_de_dados[0] ?></h5>
-                    <h4> <?php echo $chamado_de_dados[1] ?></h6>
-                    <p> <?php echo $chamado_de_dados[2] ?></p>
+                    <h3> <?php echo $chamado_de_dados[0] ?> </h5>
+                    <h4> <?php echo $chamado_de_dados[1] ?> </h6>
+                    <p> <?php echo $chamado_de_dados[2] ?> </p>
                 </div>
                 <?php } ?>
                 <a href="./home.php" class="voltar">Voltar</a>
@@ -113,6 +113,8 @@
         h3, h4, p{
             font-weight: 400;
             margin-left: 10px;
+            margin-top: 9px; 
+            margin-bottom: 9px;
         }
 
         a{
