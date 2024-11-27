@@ -36,16 +36,16 @@
                     }
 
                     if ($_SESSION['perfil'] === 'user') {
-                        if ($chamado_de_dados[1] != $_SESSION['id']) {
+                        if ($chamado_de_dados[0] != $_SESSION['id']) {
                             continue;
                         }
                     }
                 ?>
                 <div class="textos">
                     <h3><?php echo $chamado_de_dados[3]?></h3>
-                    <h4><?php echo '<p> Usuário: ' . $chamado_de_dados[2] . '</p>';?></h4>
                     <h4><?php echo $chamado_de_dados[4]?></h4>
                     <p><?php echo $chamado_de_dados[5]?></p>
+                    <p><?php echo' <p style="color: green;">Usuário: ' . $chamado_de_dados[2] . '</p>';?><p>
                 </div>
                 <?php } ?>
                 <a href="./home.php" class="voltar">Voltar</a>
