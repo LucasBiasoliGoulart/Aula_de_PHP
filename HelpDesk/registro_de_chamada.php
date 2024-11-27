@@ -1,12 +1,16 @@
 <?php
+    $id = str_replace('|', '-', $_SESSION['id']);
+    $perfil = str_replace('|', '-', $_SESSION['perfil']);
+    $nome = str_replace('|', '-', $_SESSION['nome']); 
     $titulo = str_replace('|', '-', $_POST['titulo']);
     $categoria = str_replace('|', '-', $_POST['categoria']);
     $descricao = str_replace('|', '-', $_POST['descricao']);
-    $user_id = str_replace('|', '-', $_SESSION['id']);
+    
+    $dados = $id . '|' . $perfil . '|' . $nome . '|' . $titulo. '|' . $categoria . '|' . $descricao . '|' . PHP_EOL;
 
-    $dados = $titulo. '|' . $categoria . '|' . $descricao . PHP_EOL;
+    var_dump($dados);
 
-    $arquivo = fopen('chamada.txt', 'a');
+    $arquivo = fopen('./registro/chamada.txt', 'a');
 
     fwrite($arquivo, $dados);
 

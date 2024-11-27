@@ -15,6 +15,7 @@
             <h2>Login</h2>
             <input type="email" name="email" id="email" placeholder="Email">
             <input type="password" name="senha" id="senha" placeholder="Senha">
+            <a href="./Helpdesk_db/cadastro.php">Novo cadastro</a>
 
             <?php
                 if (isset($_GET['login']) && $_GET['login'] === 'erro') { ?>
@@ -114,6 +115,14 @@
             color: red;
             font-size: 17px;
             margin-bottom: 10px;
+        }
+
+        a{
+            margin-left: 70%;
+            text-decoration: none;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            color: dodgerblue;
         }
     </style>
 </body>

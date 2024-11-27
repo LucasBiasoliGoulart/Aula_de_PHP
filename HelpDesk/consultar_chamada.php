@@ -1,7 +1,7 @@
 <?php 
-    require 'validador_de_acesso.php';
+    require_once 'validador_de_acesso.php';
 
-    $arquivo = fopen('chamada.txt', 'r');
+    $arquivo = fopen('./registro/chamada.txt', 'r');
     $chamadas = array();
 
     while (!feof($arquivo)) {
@@ -31,14 +31,21 @@
                 <?php
                     $chamado_de_dados = explode('|', $chamado);
 
-                    if (count($chamado_de_dados) < 3) {
+                    if (count($chamado_de_dados) < 6) {
                         continue;
+                    }
+
+                    if ($_SESSION['perfil'] === 'user') {
+                        if ($chamado_de_dados[1] != $_SESSION['id']) {
+                            continue;
+                        }
                     }
                 ?>
                 <div class="textos">
-                    <h3> <?php echo $chamado_de_dados[0] ?> </h5>
-                    <h4> <?php echo $chamado_de_dados[1] ?> </h6>
-                    <p> <?php echo $chamado_de_dados[2] ?> </p>
+                    <h3><?php echo $chamado_de_dados[3]?></h3>
+                    <h4><?php echo '<p> Usuário: ' . $chamado_de_dados[2] . '</p>';?></h4>
+                    <h4><?php echo $chamado_de_dados[4]?></h4>
+                    <p><?php echo $chamado_de_dados[5]?></p>
                 </div>
                 <?php } ?>
                 <a href="./home.php" class="voltar">Voltar</a>
