@@ -95,6 +95,7 @@
             padding: 5px;
             color: black;
             font-size: 15px;
+            outline: none;
         }
 
         input::placeholder{
