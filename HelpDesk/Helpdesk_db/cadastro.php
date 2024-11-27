@@ -17,9 +17,9 @@
                 <input type="email" name="email" id="email" placeholder="Email">
                 <input type="password" name="senha" id="senha" placeholder="Senha">
                 <select name="selecionar">
-                    <option value="">--Selecionar--</option>
-                    <option value="">Administrador</option>
-                    <option value="">Usuário</option>
+                    <option>--Selecionar--</option>
+                    <option>Administrador</option>
+                    <option>Usuário</option>
                 </select>
                 <button type="submit">Cadastre-se</button>
             </form>
@@ -84,6 +84,7 @@
             color: black;
             border-radius: 10px;
             font-size: 15px;
+            outline: none;
         }
 
         input::placeholder{
