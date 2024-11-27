@@ -1,3 +1,7 @@
+<?php 
+    require 'validador_de_acesso.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -11,12 +15,18 @@
             <img src="./Img/logo.png" alt="Logo">
             <h1>HelpDesk</h1>
         </div>
-        <a href="" class="link">SAIR</a>
+        <a href="./logoff.php" class="link">SAIR</a>
     </nav>
     <div class="home">
-        <div class="card">
-            <a href=""><img src="./Img/formulario_abrir_chamado.png"></a>
-            <a href=""><img src="./Img/formulario_consultar_chamado.png"></a>
+        <div class="cards">
+            <div class="card">
+                <a href="./abrir_chamada.php"><img src="./Img/formulario_abrir_chamado.png"></a>
+                <p>Abrir Chamado</p>
+            </div>
+            <div class="card">
+                <a href="./consultar_chamada.php"><img src="./Img/formulario_consultar_chamado.png"></a>
+                <p>Consultar Chamado</p>
+            </div>
         </div>
     </div>
     <style>
@@ -71,15 +81,28 @@
             justify-content: center;
         }
 
-        .card{
+        .cards{
             width: 70%;
-            height: 50vh;
+            padding: 20px;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: white;
             gap: 30%;
+        }
+
+        .card{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+
+        .card p{
+            font-size: 20px;
         }
     </style>
 </body>
