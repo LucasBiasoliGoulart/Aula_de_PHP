@@ -21,16 +21,19 @@
                     <option>Administrador</option>
                     <option>Usuário</option>
                 </select>
+
                 <?php 
                     if (isset($_GET['validaperfil']) && $_GET['validaperfil'] == 'erro') { ?>
                         <div class="alert">Obrigatório selecionar um perfil!</div>
                 <?php } ?>
+                
                 <?php
                     if (isset($_GET['usuario']) && $_GET['usuario'] === 'sucesso') { ?>
                        <script>alert('Usuário cadastrado com sucesso!');</script>
                 <?php }else if(isset($_GET['usuario']) && $_GET['usuario'] != 'sucesso') { ?>
                        <script>alert('Erro ao inserir usuário no banco, contate o administrador!');</script>
                 <?php } ?>
+
                 <button type="submit">Cadastre-se</button>
             </form>
         </div>
@@ -122,6 +125,7 @@
 
         .alert{
             color: red;
+            margin-bottom: 10px;
         }
     </style>
 </body>
