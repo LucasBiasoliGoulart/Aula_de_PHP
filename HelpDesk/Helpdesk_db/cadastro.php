@@ -11,7 +11,7 @@
         <h1>HelpDesk</h1>
     </nav>
         <div class="cadastro">
-            <form action="">
+            <form action="validador_cadastro.php" method="POST">
                 <h2>Cadastro</h2>
                 <input type="text" name="nome" id="nome" placeholder="Nome completo">
                 <input type="email" name="email" id="email" placeholder="Email">
@@ -21,6 +21,16 @@
                     <option>Administrador</option>
                     <option>Usuário</option>
                 </select>
+                <?php 
+                    if (isset($_GET['validaperfil']) && $_GET['validaperfil'] == 'erro') { ?>
+                        <div class="alert">Obrigatório selecionar um perfil!</div>
+                <?php } ?>
+                <?php
+                    if (isset($_GET['usuario']) && $_GET['usuario'] === 'sucesso') { ?>
+                       <script>alert('Usuário cadastrado com sucesso!');</script>
+                <?php }else if(isset($_GET['usuario']) && $_GET['usuario'] != 'sucesso') { ?>
+                       <script>alert('Erro ao inserir usuário no banco, contate o administrador!');</script>
+                <?php } ?>
                 <button type="submit">Cadastre-se</button>
             </form>
         </div>
@@ -108,6 +118,10 @@
             background-color: dodgerblue;
             cursor: pointer;
             font-size: 20px;
+        }
+
+        .alert{
+            color: red;
         }
     </style>
 </body>
