@@ -16,7 +16,7 @@
     <div class="home">
         <div class="cards">
             <div class="card">
-                <a href="#"><img src="./Img/formulario_abrir_chamado.png"></a>
+                <a href="./abrir_chamada.php"><img src="./Img/formulario_abrir_chamado.png"></a>
                 <p>Abrir Chamado</p>
             </div>
             <div class="card">
@@ -86,12 +86,15 @@
         }
 
         .cards{
-            width: 80%;
+            width: 90%;
+            height: 60vh;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 2%;
+            background-color: white;
+            box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.2);
+            gap: 10px;
         }
 
         .card{
