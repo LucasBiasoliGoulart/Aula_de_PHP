@@ -1,15 +1,19 @@
 <?php
+    require "config.php";
     session_start();
 
-    $chamadas = [];
-
-    $arquivo = fopen('./registro/registros.txt', 'r');
-    while (!feof($arquivo)) {
-        $registro = fgets($arquivo);
-        $chamadas[] = $registro;
+    if ($_SESSION['perfil'] != 'adm') {
+        $sql = "SELECT * FROM chamadas WHERE id_usuario = {$_SESSION['id']}";
+    }else {
+        $sql = "SELECT * FROM chamadas";
     }
 
-    fclose($arquivo);
+    $res = $conexao -> query($sql);
+    $qtd = $res -> num_rows;
+
+    $sql = "SELECT * FROM usuario";
+    $resusuarios = $conexao->query($sql);
+    $qtdsusuario = $resusuarios->num_rows;
 ?>
 
 <!DOCTYPE html>
@@ -28,25 +32,25 @@
         <div class="card">
             <h2>Consulta de chamada</h2>
             <!--Rodando um fureach passando por todas os chamados-->
-            <?php foreach($chamadas as $chamada) { ?>
-
-                <?php $chamada_dados = explode('|', $chamada);
-
-                    if (count($chamada_dados) < 6) {
-                        continue;
-                    }
-
-                    if ($_SESSION['perfil'] === 'user') {
-                        if (!isset($chamada_dados[0]) || $chamada_dados[0] != $_SESSION['id']) {
-                            continue;
-                        }
-                    }
-                ?>
+            <?php while($row = $res->fetch_object()) { ?>
             <div class="dados">
-                <h5><?php echo $chamada_dados[3]?></h5>
-                <h6><?php echo $chamada_dados[4]?></h6>
-                <h6><?php echo $chamada_dados[5] ?></h6>
-                <p><?php echo '<p style="color: green;">Usuário: ' . $chamada_dados[2] . '</p>';?></p>
+                <h5><?php echo $row -> titulo?></h5>
+                <h6><?php echo $row -> categoria?></h6>
+                <h6><?php echo $row -> descricao ?></h6>
+                <h6>
+                    <?php
+                        $idchamada = $row -> id_chamada; 
+                        $idusuario = $row -> id_usuario;
+                        $resusuarios->data_seak(0); // Reinicia o ponteiro do resultado da consulta de usuário
+                        while ($user = $resusuarios->fetch_object()) {
+                            if ($user -> id_usuario = $idusuario) {
+                                echo '<p style="color: green;">Usuário: ' . $user -> nome . '</p>';
+                                break;
+                            }
+                        }
+                    ?>
+                </h6>
+                <p><?php echo $row -> id_chamada ?></p>
             </div>
             <?php } ?>
             <a href="./home.php" class="voltar">Voltar</a>
