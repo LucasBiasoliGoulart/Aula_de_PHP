@@ -50,7 +50,7 @@
                         print "<td>" . $row -> email . "</td>";
                         print "<td>" . $row -> perfil . "</td>";
                         print "<td> <button onclick=\"location.href='edit_usuario.php?id=". $row -> id_usuario ."';\"></button></td>";
-                        print "<td> <button onclick=\"location.href='edit_usuario.php?id=". $row -> id_usuario ."';\"></button></td>";
+                        print "<td> <button onclick=\"location.href='deletar_usuario.php?id=". $row -> id_usuario ."';\"></button></td>";
                         print "</tr>";
                    }
                    print "</table>";
@@ -60,7 +60,7 @@
         </div>
     </div>
     <style>
-         *{
+        *{
             margin: 0;
             padding: 0;
         }
