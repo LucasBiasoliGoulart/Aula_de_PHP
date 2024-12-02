@@ -38,7 +38,7 @@
             </div>
             <div class="botoes">
                 <a href="./home.php">Voltar</a>
-                <button type="submit" class="enviar">Enviar</button>
+                <button type="submit">Enviar</button>
             </div>
         </div>
     </div>
@@ -150,11 +150,12 @@
             height: 20vh;
             padding: 10px;
             font-size: 20px;
+            outline: none;
         }
 
         /*-----Botões-----*/
         .botoes a, button{
-            padding: 10px 70px;
+            padding: 10px 90px;
             border: none;
             text-decoration: none;
             background-color: dodgerblue;
@@ -162,10 +163,6 @@
             font-size: 20px;
             cursor: pointer;
             border-radius: 5px;
-        }
-
-        .enviar{
-            background-color: gold;
         }
     </style>
 </body>
