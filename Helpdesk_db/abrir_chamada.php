@@ -34,7 +34,7 @@
             </div>
             <div class="dados">
                 <label>Descrição</label>
-                <textarea name="" id=""></textarea>
+                <textarea name="descricao"></textarea>
             </div>
             <div class="botoes">
                 <a href="./home.php">Voltar</a>
