@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     $chamadas = [];
 
     $arquivo = fopen('./registro/registros.txt', 'r');
@@ -35,7 +37,7 @@
                     }
 
                     if ($_SESSION['perfil'] === 'user') {
-                        if ($chamada_dados[0] != $_SESSION['id']) {
+                        if (!isset($chamada_dados[0]) || $chamada_dados[0] != $_SESSION['id']) {
                             continue;
                         }
                     }
@@ -47,6 +49,7 @@
                 <p><?php echo '<p style="color: green;">Usuário: ' . $chamada_dados[2] . '</p>';?></p>
             </div>
             <?php } ?>
+            <a href="./home.php" class="voltar">Voltar</a>
         </div>
     </div>
     <style>
@@ -100,7 +103,7 @@
 
         .card{
             width: 50%;
-            padding: 10px 15px;
+            padding: 19px 15px;
             border-radius: 10px;
             background-color: white;
             box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.2);
@@ -116,6 +119,8 @@
             width: 100%;
             border-radius: 7px;
             border: 1px solid gray;
+            margin-bottom: 20px;
+            margin-top: 10px;
         }
 
         h5, h6, p{
@@ -124,6 +129,18 @@
             margin-top: 5px;
             margin-left: 10px;
             font-weight: 400;
+        }
+
+        /*-----Botão_de_voltar-----*/
+        .voltar{
+            padding: 10px 70px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            background-color: dodgerblue;
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
         }
     </style>
 </body>
