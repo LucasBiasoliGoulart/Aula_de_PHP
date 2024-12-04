@@ -17,7 +17,7 @@
                 <input type="email" name="email" id="email" placeholder="Email" required>
                 <input type="password" name="senha" id="senha" placeholder="Senha" required>
                 <select name="perfil">
-                    <option value="" disabled required>--Selecionar--</option>
+                    <option value="" disabled required>----Selecionar----</option>
                     <option>Adm</option>
                     <option>User</option>
                 </select>
