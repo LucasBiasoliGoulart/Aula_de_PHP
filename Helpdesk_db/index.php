@@ -13,8 +13,8 @@
     <div class="login">
         <form action="validador_de_login.php" method="GET">
             <h2>Login</h2>
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="password" name="senha" id="senha" placeholder="Senha">
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="password" name="senha" id="senha" placeholder="Senha" required>
             <a href="./cadastro.php">Novo cadastro</a>
 
             <?php

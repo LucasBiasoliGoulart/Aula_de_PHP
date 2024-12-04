@@ -11,20 +11,19 @@
         <h1>HelpDesk</h1>
     </nav>
         <div class="cadastro">
-            <form action="validador_cadastro.php" method="POST">
+            <form action="validador_cadastro.php" method="GET">
                 <h2>Cadastro</h2>
-                <input type="text" name="nome" id="nome" placeholder="Nome completo">
-                <input type="email" name="email" id="email" placeholder="Email">
-                <input type="password" name="senha" id="senha" placeholder="Senha">
-                <select name="selecionar">
-                    <option>--Selecionar--</option>
-                    <option>Administrador</option>
-                    <option>Usuário</option>
+                <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                <select name="perfil">
+                    <option value="" disabled required>--Selecionar--</option>
+                    <option>Adm</option>
+                    <option>User</option>
                 </select>
 
-                <?php 
-                    if (isset($_GET['validaperfil']) && $_GET['validaperfil'] == 'erro') { ?>
-                        <div class="alert">Obrigatório selecionar um perfil!</div>
+                <?php if (isset($_GET['validaperfil']) && $_GET['validaperfil'] == 'erro') { ?>
+                    <div class="alert">Obrigatorio selecionar o perfil!</div>
                 <?php } ?>
                 
                 <?php
@@ -76,10 +75,15 @@
 
         form{
             width: 30%;
-            padding: 10px;
+            padding: 20px 20px;
             border-radius: 10px;
             background-color: white;
             border: 1px solid gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.2);
         }
 
         h2{
@@ -89,13 +93,13 @@
         }
 
         input{
-            width: 98%;
+            width: 100%;
             height: 5vh;
             margin-bottom: 10px;
             background-color: #F3F3F3;
             border: 1px solid gray;
             color: black;
-            border-radius: 10px;
+            border-radius: 5px;
             font-size: 15px;
             outline: none;
         }
@@ -105,16 +109,18 @@
         }
 
         select{
-            width: 99%;
+            width: 100%;
             height: 5vh;
             text-align: center;
-            background-color: #C1C1C1;
             color: black;
             margin-bottom: 10px;
+            background-color: #F3F3F3;
+            font-size: 15px;
+            outline: none;
         }
 
         button{
-            width: 99%;
+            width: 100%;
             height: 50px;
             border: none;
             border-radius: 5px;
