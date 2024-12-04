@@ -20,7 +20,7 @@
                 <p>Abrir Chamado</p>
             </div>
             <div class="card">
-                <a href="#"><img src="./Img/formulario_consultar_chamado.png"></a>
+                <a href="./consultar_chamada.php"><img src="./Img/formulario_consultar_chamado.png"></a>
                 <p>Consultar Chamado</p>
             </div>
             <div class="card">

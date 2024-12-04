@@ -116,12 +116,12 @@
         .dados{
             width: 100%;
             margin-top: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             text-align: left;
         }
 
         label{
-            font-size: 27px;
+            font-size: 24px;
         }
 
         input{
@@ -148,19 +148,18 @@
         textarea{
             width: 94%;
             height: 20vh;
-            padding: 10px;
-            font-size: 20px;
             outline: none;
+            font-size: 15px;
         }
 
         /*-----Botões-----*/
         .botoes a, button{
-            padding: 10px 90px;
+            padding: 10px 40px;
             border: none;
             text-decoration: none;
             background-color: dodgerblue;
             color: black;
-            font-size: 20px;
+            font-size: 17px;
             cursor: pointer;
             border-radius: 5px;
         }

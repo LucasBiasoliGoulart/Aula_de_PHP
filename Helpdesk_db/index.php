@@ -15,7 +15,7 @@
             <h2>Login</h2>
             <input type="email" name="email" id="email" placeholder="Email">
             <input type="password" name="senha" id="senha" placeholder="Senha">
-            <a href="./Helpdesk_db/cadastro.php">Novo cadastro</a>
+            <a href="./cadastro.php">Novo cadastro</a>
 
             <?php
                 if (isset($_GET['login']) && $_GET['login'] === 'erro') { ?>
