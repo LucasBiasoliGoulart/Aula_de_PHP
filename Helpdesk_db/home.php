@@ -14,22 +14,27 @@
         <a href="./logoff.php" class="link">SAIR</a>
     </nav>
     <div class="home">
-        <div class="cards">
-            <div class="card">
-                <a href="./abrir_chamada.php"><img src="./Img/formulario_abrir_chamado.png"></a>
-                <p>Abrir Chamado</p>
+        <div class="links">
+            <div class="titulo">
+                <h1>Menu</h1>
             </div>
-            <div class="card">
-                <a href="./consultar_chamada.php"><img src="./Img/formulario_consultar_chamado.png"></a>
-                <p>Consultar Chamado</p>
-            </div>
-            <div class="card">
-                <a href="#"><img src="./Img/autorizacao.png"></a>
-                <p>Autorização</p>
-            </div>
-            <div class="card">
-                <a href="#"><img src="./Img/editar-arquivo.png"></a>
-                <p>Editar Arquivo</p>
+            <div class="cards">
+                <div class="card">
+                    <a href="./abrir_chamada.php"><img src="./Img/formulario_abrir_chamado.png"></a>
+                    <p>Abrir</p>
+                </div>
+                <div class="card">
+                    <a href="./consultar_chamada.php"><img src="./Img/formulario_consultar_chamado.png"></a>
+                    <p>Consultar</p>
+                </div>
+                <div class="card">
+                    <a href="#"><img src="./Img/editar-arquivo.png"></a>
+                    <p>Editar</p>
+                </div>
+                <div class="card">
+                    <a href="#"><img src="./Img/autorizacao.png"></a>
+                    <p>Autorização</p>
+                </div>
             </div>
         </div>
     </div>
@@ -40,7 +45,7 @@
             margin: 0;
             padding: 0;
             font-family: arial;
-            background-color: #E1E1E1;
+            background-color: #EEEEEE;
         }
 
         nav{
@@ -85,16 +90,37 @@
             justify-content: center;
         }
 
-        .cards{
-            width: 90%;
-            height: 60vh;
+        /*-----Links-----*/
+        .links{
+            width: 80%;
             border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.2);
+        }
+
+        /*-----Titulo-----*/
+        .titulo{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            border-bottom: 1px solid black;
+        }
+
+        .titulo h1{
+            font-weight: 400;
+            margin-left: 30px;
+        }
+
+        /*-----Cards----*/
+        .cards{
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: white;
-            box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.2);
-            gap: 10px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            gap: 3%;
         }
 
         .card{
@@ -106,6 +132,11 @@
             border: 1px solid black;
             padding: 10px;
             background-color: white;
+        }
+
+        .card img{
+            width: 100%;
+            height: 20vh;
         }
 
         .card p{
