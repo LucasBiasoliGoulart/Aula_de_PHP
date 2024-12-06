@@ -3,9 +3,9 @@
     session_start();
 
     if ($_SESSION['perfil'] != 'adm') {
-        $sql = "SELECT * FROM chamadas WHERE id_usuario = {$_SESSION['id']}";
+        $sql = "SELECT * FROM chamados WHERE id_usuario = {$_SESSION['id']}";
     }else {
-        $sql = "SELECT * FROM chamadas";
+        $sql = "SELECT * FROM chamados";
     }
 
     $res = $conexao -> query($sql);
@@ -39,7 +39,7 @@
                 <h6><?php echo $row -> descricao ?></h6>
                 <h6>
                     <?php
-                        $idchamada = $row -> id_chamada; 
+                        $idchamada = $row -> id_chamados; 
                         $idusuario = $row -> id_usuario;
                         $resusuarios->data_seak(0); // Reinicia o ponteiro do resultado da consulta de usuário
                         while ($user = $resusuarios->fetch_object()) {
@@ -50,7 +50,7 @@
                         }
                     ?>
                 </h6>
-                <p><?php echo $row -> id_chamada ?></p>
+                <p><?php echo $row -> id_chamados ?></p>
             </div>
             <?php } ?>
             <a href="./home.php" class="voltar">Voltar</a>
@@ -66,7 +66,7 @@
             width: 100%;
             height: 100vh;
             font-family: arial;
-            background-color: #E1E1E1;
+            background-color: #EEEEEE;
         }
 
         nav{
@@ -106,7 +106,7 @@
         }
 
         .card{
-            width: 50%;
+            width: 70%;
             padding: 19px 15px;
             border-radius: 10px;
             background-color: white;
@@ -116,6 +116,7 @@
         .card h2{
             font-size: 27px;
             font-weight: 400;
+            margin-bottom: 20px;
         }
 
         /*-----Dados-----*/

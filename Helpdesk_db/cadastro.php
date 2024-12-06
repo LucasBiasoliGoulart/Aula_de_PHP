@@ -17,7 +17,7 @@
                 <input type="email" name="email" id="email" placeholder="Email" required>
                 <input type="password" name="senha" id="senha" placeholder="Senha" required>
                 <select name="perfil">
-                    <option value="" disabled required>----Selecionar----</option>
+                    <option required>Selecionar</option>
                     <option>Adm</option>
                     <option>User</option>
                 </select>
@@ -43,7 +43,7 @@
             margin: 0;
             padding: 0;
             font-family: arial;
-            background-color: #E1E1E1;
+            background-color: #EEEEEE;
         }
         nav{
             width: 100%;

@@ -1,40 +1,31 @@
 <?php
     include ('config.php');
-    mysqli_select_db($conexao, 'helpdesk');
-    mysqli_query($conexao, 'CREATE DATABASE IF NOT EXISTS helpdesk');
+    
+    // Verificar se o email está cadastradl
+    $sql = "SELECT * FROM usuario where email = '{$_POST['email']}'";
+    $res = $conexao->query($sql);
 
-    // Tabela
-    mysqli_query($conexao, 'CREATE TABLE tb_dados(
-        id int primary key auto_increment,
-        nome varchar(50) not null,
-        email varchar(50) not null,
-        senha varchar(50) not null,
-        perfil varchar(50) not null
-    )');
-
-    echo '<pre>';
-    var_dump($_POST);
-    echo '</pre>';
-
-    // Verificar se o campo 'Perfil' está presente e valido
-    if(!isset($_POST['perfil']) || $_POST['perfil'] === '--Selecionar--') {
-        header('location: cadastro.php?validaperfil=erro');
-        exit;
+    if($res->num_rows > 0) {
+        header('location: cadastro.php?email=erro');
+        exit();
     }
 
-    // Sanitização dos dados enviados
-    $nome = mysqli_real_escape_string($conexao, $_POST['nome']);
-    $email = mysqli_real_escape_string($conexao, $_POST['email']);
-    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
-    $perfil = mysqli_real_escape_string($conexao, $_POST['perfil']);
-
-    // Insere os dados no banco
-    $sql = "INSERT INTO tb_dados(nome, email, senha, perfil) VALUES ('{$nome}', '{$email}', '{$senha}', '{$perfil}')";
-    $res = mysqli_query($conexao, $sql);
-
-    if ($res) {
-        header('location: cadastro.php?usuario=sucesso');
+    // Valida se a opção foi selecionada
+    if($_POST['perfil'] === "Selecionar") {
+        header('location: cadastro.php?validaperfil=erro');
     }else {
-        header('location: cadastro.php?usuario=falho');
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $senha = md5($_POST['senha']);
+        $perfil = $_POST['perfil'];
+
+        $sql = "INSERT INTO usuario(nome, email, senha, perfil) values ('{$nome}', '{$email}', '{$senha}', '{$perfil}')";
+        $res = $conexao->query($sql);
+
+        if($res==true) {
+            header('location: index.php?usuario=sucesso');
+        }else {
+            header('location: cadastro.php?usuario=falho');
+        }
     }
 ?>

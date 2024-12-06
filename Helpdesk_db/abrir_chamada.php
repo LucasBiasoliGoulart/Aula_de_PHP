@@ -52,7 +52,7 @@
             width: 100%;
             height: 100vh;
             font-family: arial;
-            background-color: #E1E1E1;
+            background-color: #EEEEEE;
         }
 
         nav{
