@@ -1,7 +1,7 @@
 <?php
     include ('config.php');
     
-    // Verificar se o email está cadastradl
+    // Verificar se o email está cadastrado
     $sql = "SELECT * FROM usuario where email = '{$_POST['email']}'";
     $res = $conexao->query($sql);
 
@@ -13,6 +13,7 @@
     // Valida se a opção foi selecionada
     if($_POST['perfil'] === "Selecionar") {
         header('location: cadastro.php?validaperfil=erro');
+        exit();
     }else {
         $nome = $_POST['nome'];
         $email = $_POST['email'];
@@ -20,9 +21,9 @@
         $perfil = $_POST['perfil'];
 
         $sql = "INSERT INTO usuario(nome, email, senha, perfil) values ('{$nome}', '{$email}', '{$senha}', '{$perfil}')";
-        $res = $conexao->query($sql);
+        //$res = $conexao->query($sql);
 
-        if($res==true) {
+        if($res == true) {
             header('location: index.php?usuario=sucesso');
         }else {
             header('location: cadastro.php?usuario=falho');

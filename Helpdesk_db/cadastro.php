@@ -25,6 +25,10 @@
                     <option>User</option>
                 </select>
 
+                <?php if (isset($_GET['email']) && $_GET['email'] === 'erro') { ?>
+                    <div class="alert">Email já cadastrado!</div>
+                <?php } ?>
+
                 <?php if (isset($_GET['validaperfil']) && $_GET['validaperfil'] == 'erro') { ?>
                     <div class="alert">Obrigatorio selecionar o perfil!</div>
                 <?php } ?>

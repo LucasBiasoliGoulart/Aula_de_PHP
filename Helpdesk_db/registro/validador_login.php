@@ -1,4 +1,5 @@
 <?php 
+    require 'config.php';
     session_start();
 
     $usuario = array(
@@ -23,7 +24,7 @@
         $_SESSION['id'] = $row->id_usuario;
         $_SESSION['perfil'] = $row->perfil;
         $_SESSION['nome'] = $row->nome;
-    }else {
+    }else{
         $usuarioAutenticado = false;
     }
 
