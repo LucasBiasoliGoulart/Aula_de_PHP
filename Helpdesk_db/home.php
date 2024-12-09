@@ -35,6 +35,14 @@
                     <a href="#"><img src="./Img/autorizacao.png"></a>
                     <p>Autorização</p>
                 </div>
+                <div class="card">
+                    <a href="#"><img src="./Img/usuarios.png"></a>
+                    <p>Usuários</p>
+                </div>
+                <div class="card">
+                    <a href="#"><img src="./Img/relatorio.png"></a>
+                    <p>Relatórios</p>
+                </div>
             </div>
         </div>
     </div>
@@ -109,7 +117,7 @@
 
         .titulo h1{
             font-weight: 400;
-            margin-left: 30px;
+            margin-left: 2%;
         }
 
         /*-----Cards----*/
@@ -120,7 +128,7 @@
             justify-content: center;
             margin-bottom: 20px;
             margin-top: 20px;
-            gap: 3%;
+            gap: 2%;
         }
 
         .card{
@@ -128,10 +136,6 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            border-radius: 10px;
-            border: 1px solid black;
-            padding: 10px;
-            background-color: white;
         }
 
         .card img{

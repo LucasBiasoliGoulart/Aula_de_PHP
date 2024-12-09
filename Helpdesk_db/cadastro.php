@@ -7,8 +7,11 @@
 </head>
 <body>
     <nav>
-        <img src="./Img/logo.png" alt="Logo">
-        <h1>HelpDesk</h1>
+        <div class="logo">
+            <img src="./Img/logo.png" alt="Logo">
+            <h1>HelpDesk</h1>
+        </div>
+        <a href="./index.php" class="link">VOLTAR</a>
     </nav>
         <div class="cadastro">
             <form action="validador_cadastro.php" method="GET">
@@ -50,6 +53,7 @@
             height: 10vh;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             background: black;
             color: white;
         }
@@ -63,6 +67,19 @@
 
         nav h1{
             font-weight: 400;
+        }
+
+        .logo{
+            width: 20%;
+            display: flex;
+            align-items: center;
+        }
+
+        .link{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            margin-right: 30px
         }
 
         .cadastro{
@@ -123,7 +140,7 @@
             width: 100%;
             height: 50px;
             border: none;
-            border-radius: 5px;
+            border-radius: 7px;
             background-color: dodgerblue;
             cursor: pointer;
             font-size: 20px;
