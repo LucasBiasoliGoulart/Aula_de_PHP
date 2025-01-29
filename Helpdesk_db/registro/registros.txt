@@ -1,3 +1,0 @@
-1|adm|Lucas|Celular|Software|Teste
-2|user|Felipe|Computador|Software|Teste
-3|user|Gustavo|Empresora|Software|Teste
