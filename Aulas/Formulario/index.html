@@ -8,24 +8,25 @@
 </head>
 <body>
     <div class="card">
-        <h1>Personagem</h1>
+        <form action="./personagem.php" method="GET">
+        <h1>Criar seu Personagem</h1>
         <div class="class">
             <label>Nome:</label>
-            <input type="text">
+            <input type="text" name="name">
         </div>
         <div class="class">
-            <label>Class do Personagem:</label>
-            <select>
+            <label>Classe do Personagem:</label>
+            <select name="classe" id="classe">
                 <option>Guerreiro</option>
                 <option>Mago</option>
                 <option>Ninja</option>
                 <option>Arqueiro</option>
-                <option>Heroi</option>
+                <option>Pirata</option>
             </select>
         </div>
         <div class="class">
             <label>Tipo do Personagem:</label>
-            <select>
+            <select name="tipo" id="tipo">
                 <option>Humano</option>
                 <option>Anão</option>
                 <option>Elfo</option>
@@ -33,7 +34,8 @@
                 <option>Deus</option>
             </select>
         </div>
-        <button>Criar Personagem</button>
+        <button type="submit">Criar Personagem</button>
+        </form>
     </div>
 </body>
 </html>
