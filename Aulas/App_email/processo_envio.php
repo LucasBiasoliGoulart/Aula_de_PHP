@@ -8,7 +8,7 @@ require './Bibliotecas/PHPMailer/SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-class Email {
+class Mensagem {
     private $para = null;
     private $assunto = null;
     private $mensagem = null;
@@ -26,7 +26,7 @@ class Email {
         if (empty($this->para) || empty($this->assunto) || empty($this->mensagem)) {
             return false;
         }
-            return true;
+        return true;
     }
 }
 
@@ -46,19 +46,19 @@ if(!$mensagem-> mensagemValida()) {
         $email->isSMTP();
         $email->Host       = 'smtp.example.com';
         $email->SMTPAuth   = true;
-        $email->Username   = 'user@example.com';
-        $email->Password   = 'secret';
+        $email->Username   = '';
+        $email->Password   = '';
         $email->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $email->Port       = 465;
 
         // Reciptions
-        $email->setForm('form@example.com', 'App_email');
-        $email->addAdress($mensagem->__get('para'));
+        $email->setFrom('', 'App_email');
+        $email->addAddress($mensagem->__get('para'));
 
         // Content
         $email->isHTML(true);
-        $email->Subject = $mensagem->__get('assunto')
-        $email->Body    = $mensagem->__get('mensagem')
+        $email->Subject = $mensagem->__get('assunto');
+        $email->Body    = $mensagem->__get('mensagem');
         $email->AltBody = 'É necessário utilizar um client que suporte HTML para ter acesso total ao conteúdo desta mensagem!';
 
         $email->send();
@@ -90,14 +90,14 @@ if(!$mensagem-> mensagemValida()) {
     </div>
     <div class="d-flex align-items-center justify-content-center" style="height: 90vh">
     <div class="card" style="width: 30%;">
-        <?php if ($mensagem->status['codigo_status'] == 1){ ?>
+        <?php if ($mensagem->status['codigo_status'] == 2){ ?>
             <div class="card-body bg-success-subtle border-success-subtle">
                 <h1 class="card-title text-success">Sucesso</h1>
                 <p><?= $mensagem->status['descricao_status']; ?></p>
                 <a href="./index.php" class="btn btn-success text-white">Voltar</a>
             </div>
         <?php } ?>
-        <?php if ($mensagem->status['codigo_status'] == 1){ ?>
+        <?php if ($mensagem->status['codigo_status'] == 2){ ?>
             <div class="card-body bg-danger-subtle border-success-subtle">
                 <h1 class="card-title text-danger">Sucesso</h1>
                 <p><?= $mensagem->status['descricao_status']; ?></p>
