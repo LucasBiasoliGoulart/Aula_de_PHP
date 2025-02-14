@@ -7,16 +7,16 @@
     <title>App Email</title>
 </head>
 <body>
-    <div class="navbar bg-light">
+    <div class="navbar bg-secondary">
         <div class="container-fluid">
-            <div class="navbar-brand">
+            <div class="navbar-brand text-light">
                 <img src="./e-mail.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
                 App Email
             </div>
         </div>
     </div>
-    <div class="row m-5">
-        <div class="card">
+    <div class="d-flex align-items-center justify-content-center bg-light" style="height: 90vh">
+        <div class="card" style="width: 36rem">
             <div class="card-body">
                 <form action="processo_envio.php">
                     <div class="mb-3">

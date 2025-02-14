@@ -80,15 +80,15 @@ if(!$mensagem-> mensagemValida()) {
     <title>App Email</title>
 </head>
 <body>
-    <div class="navbar bg-light">
+    <div class="navbar bg-secondary">
         <div class="container-fluid">
-            <div class="navbar-brand">
+            <div class="navbar-brand text-light">
                 <img src="./e-mail.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
                 App Email
             </div>
         </div>
     </div>
-    <div style="width: 100%; height: 40vh; display: flex; align-items: center; justify-content: center;">
+    <div class="d-flex align-items-center justify-content-center" style="height: 90vh">
     <div class="card" style="width: 30%;">
         <?php if ($mensagem->status['codigo_status'] == 1){ ?>
             <div class="card-body bg-success-subtle border-success-subtle">
